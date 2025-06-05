@@ -6,4 +6,7 @@ public class Lamp {
 		System.out.println("Lamp On");
 	}
 
+	public void turnOff() {
+		System.out.println("Lamp Off");
+	}
 }
