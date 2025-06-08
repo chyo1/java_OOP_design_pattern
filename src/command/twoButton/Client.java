@@ -8,7 +8,7 @@ public class Client {
 		TV tv = new TV();
 		TwoButtonController twoButton = new TwoButtonController();
 
-		Command command1 = new PowerCommand(tv);
+		Command command1 = new MuteCommand(tv);
 		Command command2 = new PowerCommand(tv);
 
 		twoButton.setCommand(command1, command2);
