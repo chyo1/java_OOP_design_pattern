@@ -3,7 +3,7 @@ package observer;
 import java.util.Collections;
 import java.util.List;
 
-public class MinMaxView {
+public class MinMaxView implements Observer {
 	ScoreRecord scoreRecord;
 
 	public MinMaxView(ScoreRecord scoreRecord) {
