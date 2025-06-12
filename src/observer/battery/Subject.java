@@ -12,7 +12,7 @@ public abstract class Subject {
 		observers.add(observer);
 	}
 
-	public void dettach(Observer observer) {
+	public void detach(Observer observer) {
 		observers.remove(observer);
 	}
 
