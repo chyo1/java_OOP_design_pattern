@@ -12,10 +12,10 @@ public class MinMaxView implements Observer {
 
 	public void update() {
 		List<Integer> record = scoreRecord.getScoreRecord();
-		displayMniMax(record);
+		displayMinMax(record);
 	}
 
-	private void displayMniMax(List<Integer> record) {
+	private void displayMinMax(List<Integer> record) {
 		int min = Collections.min(record, null);
 		int max = Collections.max(record, null);
 		System.out.println("Min: " + min + " Max: " + max);
