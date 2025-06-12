@@ -8,8 +8,8 @@ public class Client {
 		BatteryLevelDisplay batteryDisplay = new BatteryLevelDisplay(battery);
 		LowBatteryWarning lowBatteryWarning = new LowBatteryWarning(battery);
 
-		battery.setDisplay(batteryDisplay);
-		battery.setWarning(lowBatteryWarning);
+		battery.attach(batteryDisplay);
+		battery.attach(lowBatteryWarning);
 
 		battery.consume(20);
 		battery.consume(50);

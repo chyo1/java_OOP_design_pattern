@@ -1,6 +1,8 @@
 package observer.battery;
 
-public class BatteryLevelDisplay {
+import observer.Observer;
+
+public class BatteryLevelDisplay implements Observer {
 
 	private Battery battery;
 

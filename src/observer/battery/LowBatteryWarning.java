@@ -1,6 +1,8 @@
 package observer.battery;
 
-public class LowBatteryWarning {
+import observer.Observer;
+
+public class LowBatteryWarning implements Observer {
 	private static final int LOW_BATTERY = 30;
 	private Battery battery;
 

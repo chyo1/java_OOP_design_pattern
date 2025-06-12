@@ -1,22 +1,17 @@
 package observer.battery;
 
-public class Battery {
+import java.util.ArrayList;
+import java.util.List;
+import observer.Observer;
+import observer.Subject;
+
+public class Battery extends Subject {
 	private int level = 100;
-	private BatteryLevelDisplay display;
-	private LowBatteryWarning warning;
-
-	public void setDisplay(BatteryLevelDisplay display) {
-		this.display = display;
-	}
-
-	public void setWarning(LowBatteryWarning warning) {
-		this.warning = warning;
-	}
+	private List<Observer> observers = new ArrayList<>();
 
 	public void consume(int amount) {
 		level -= amount;
-		display.update();
-		warning.update();
+		notifyObservers();
 	}
 
 	public int getLevel() {
