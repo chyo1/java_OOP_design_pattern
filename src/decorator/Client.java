@@ -7,7 +7,7 @@ public class Client {
 		road.draw();
 		System.out.println("---------------------------------");
 
-		LanDecorator roadWithLane = new LanDecorator(new RoadDisplay());
+		LaneDecorator roadWithLane = new LaneDecorator(new RoadDisplay());
 		roadWithLane.draw();
 		System.out.println("---------------------------------");
 
@@ -16,7 +16,7 @@ public class Client {
 
 		System.out.println("---------------------------------");
 		TrafficDecorator roadWithLandAndTraffic
-				= new TrafficDecorator(new LanDecorator(new RoadDisplay()));
+				= new TrafficDecorator(new LaneDecorator(new RoadDisplay()));
 		roadWithLandAndTraffic.draw();
 	}
 }

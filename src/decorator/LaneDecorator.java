@@ -1,8 +1,8 @@
 package decorator;
 
-public class LanDecorator extends DisplayDecorator {
+public class LaneDecorator extends DisplayDecorator {
 
-	public LanDecorator(Display decoratedDisplay) {
+	public LaneDecorator(Display decoratedDisplay) {
 		super(decoratedDisplay);
 	}
 
