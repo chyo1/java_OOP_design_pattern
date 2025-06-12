@@ -1,6 +1,10 @@
 package decorator;
 
-public class RoadDisplayWithLane extends RoadDisplay {
+public class LanDecorator extends DisplayDecorator {
+
+	public LanDecorator(Display decoratedDisplay) {
+		super(decoratedDisplay);
+	}
 
 	public void draw() {
 		super.draw();

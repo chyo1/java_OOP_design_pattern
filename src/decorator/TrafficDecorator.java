@@ -1,6 +1,10 @@
 package decorator;
 
-public class RoadDisplayWithTraffic extends RoadDisplay {
+public class TrafficDecorator extends DisplayDecorator {
+
+	public TrafficDecorator(Display decoratedDisplay) {
+		super(decoratedDisplay);
+	}
 
 	@Override
 	public void draw() {
