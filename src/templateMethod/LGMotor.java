@@ -1,9 +1,6 @@
 package templateMethod;
 
 public class LGMotor extends Motor {
-	private Door door;
-	private MotorStatus motorStatus;
-
 	public LGMotor(Door door) {
 		super(door);
 	}

@@ -4,9 +4,6 @@ import java.nio.file.OpenOption;
 
 public class HyundaiMotor extends Motor {
 
-	private Door door;
-	private MotorStatus motorStatus;
-
 	public HyundaiMotor(Door door) {
 		super(door);
 	}
