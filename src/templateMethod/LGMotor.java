@@ -5,20 +5,9 @@ public class LGMotor extends Motor {
 		super(door);
 	}
 
-	private void moveLGMotor(Direction direction) {
-		// move Hyundai motor
-	}
+	@Override
+	protected void moveMotor(Direction direction) {
+		// move LG motor
 
-	public void move (Direction direction) {
-		MotorStatus motorStatus = getMotorStatus();
-		if (motorStatus == MotorStatus.MOVING)
-			return;
-
-		DoorStatus doorStatus = door.getDoorStatus();
-		if (doorStatus == DoorStatus.OPENED)
-			door.close();
-
-		moveLGMotor(direction);
-		setMotorStatus(MotorStatus.MOVING);
 	}
 }
