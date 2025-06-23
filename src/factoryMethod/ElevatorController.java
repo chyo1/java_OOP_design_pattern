@@ -10,7 +10,7 @@ public class ElevatorController {
 	}
 
 	public void gotoFloor(int destination) {
-		System.out.println("Elevator [" + id + "] Floor: " + curFloor);
+		System.out.print("Elevator [" + id + "] Floor: " + curFloor);
 
 		curFloor = destination;
 		System.out.println(" ==> " + curFloor);
