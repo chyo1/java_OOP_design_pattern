@@ -1,6 +1,6 @@
 package composite;
 
-public class Keyboard {
+public class Keyboard extends ComputerDevice {
 	private int price;
 	private int power;
 

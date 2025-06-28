@@ -1,6 +1,6 @@
 package composite;
 
-public class Monitor {
+public class Monitor extends ComputerDevice {
 	private int price;
 	private int power;
 

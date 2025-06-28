@@ -1,41 +1,27 @@
 package composite;
 
-public class Computer {
+import java.util.ArrayList;
+import java.util.List;
 
-	private Body body;
-	private Keyboard keyboard;
-	private Monitor monitor;
-	private Speaker speaker;
+public class Computer extends ComputerDevice {
 
-	public void addBody(Body body) {
-		this.body = body;
-	}
+	private List<ComputerDevice> components = new ArrayList<>();
 
-	public void addKeyboard(Keyboard keyboard) {
-		this.keyboard = keyboard;
-	}
-
-	public void addMonitor(Monitor monitor) {
-		this.monitor = monitor;
-	}
-
-	public void addSpeaker(Speaker speaker) {
-		this.speaker = speaker;
+	public void addComponent(ComputerDevice component) {
+		components.add(component);
 	}
 
 	public int getPrice() {
-		int bodyPrice = body.getPrice();
-		int keyboardPrice = keyboard.getPrice();
-		int monitorPrice = monitor.getPrice();
-		int speakerPrice = speaker.getPrice();
-		return bodyPrice + keyboardPrice + monitorPrice + speakerPrice;
+		int price = 0;
+		for (ComputerDevice component : components)
+			price += component.getPrice();
+		return price;
 	}
 
 	public int getPower() {
-		int bodyPower = body.getPower();
-		int keyboardPower = keyboard.getPower();
-		int monitorPower = monitor.getPower();
-		int speakerPower = speaker.getPower();
-		return bodyPower + keyboardPower + monitorPower + speakerPower;
+		int power = 0;
+		for (ComputerDevice component : components)
+			power += component.getPower();
+		return power;
 	}
 }

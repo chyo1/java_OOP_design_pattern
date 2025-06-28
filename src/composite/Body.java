@@ -1,6 +1,6 @@
 package composite;
 
-public class Body {
+public class Body extends ComputerDevice {
 	private int price;
 	private int power;
 

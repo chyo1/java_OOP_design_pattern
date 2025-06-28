@@ -10,9 +10,9 @@ public class Client {
 		Monitor monitor = new Monitor(20, 30);
 
 		Computer computer = new Computer();
-		computer.addBody(body);
-		computer.addKeyboard(keyboard);
-		computer.addMonitor(monitor);
+		computer.addComponent(body);
+		computer.addComponent(keyboard);
+		computer.addComponent(monitor);
 
 		int computerPrice = computer.getPrice();
 		int computerPower = computer.getPower();
