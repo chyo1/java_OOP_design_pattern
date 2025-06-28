@@ -3,12 +3,19 @@ package abstractFactory;
 public class Client {
 
 	public static void main(String[] args) {
-		Door lgDoor = DoorFactory.createDoor(VendorId.LG);
-		Motor lgMotor = MotorFactory.createMotor(VendorId.LG);
-		lgMotor.setDoor(lgDoor);
+//		Door hyundaiDoor = DoorFactory.createDoor(VendorId.HYUNDAI);
+//		Motor hyundaiMotor = MotorFactory.createMotor(VendorId.HYUNDAI);
+//		hyundaiMotor.setDoor(hyundaiDoor);
+//
+//		hyundaiDoor.open();
+//		hyundaiMotor.move(Direction.UP);
 
-		lgDoor.open();
-		lgMotor.move(Direction.UP);
+		ElevatorFactory factory = null;
+		String vendorName = args[0];
+		if (vendorName.equalsIgnoreCase("LG"))
+			factory = new LGElevatorFactory();
+		else
+			factory = new HyundaiElevatorFactory();
 	}
 
 }
