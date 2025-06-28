@@ -13,9 +13,9 @@ public class Client {
 		ElevatorFactory factory = null;
 		String vendorName = args[0];
 		if (vendorName.equalsIgnoreCase("LG"))
-			factory = new LGElevatorFactory();
+			factory = LGElevatorFactory.getInstance();
 		else
-			factory = new HyundaiElevatorFactory();
+			factory = HyundaiElevatorFactory.getInstance();
 	}
 
 }
